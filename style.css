@@ -1,0 +1,1090 @@
+/* author: https://codepen.io/MuzammalAhmed/pen/qBGVZPe
+Muzammal Ahmed */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonbon&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-family: Poppins;
+}
+.active{
+  transition: .8s ease-in-out;
+  width: 70px !important;
+}
+.active .text{
+display: none;
+}
+.active .Links p{
+  display: none !important;
+}
+aside {
+  transition: .8s ease-in-out;
+
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 1.1rem;
+    background-color: #212529;
+    backdrop-filter: blur(20px);
+}
+
+.Links {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+aside li {
+    list-style-type: none;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.2s;
+}
+
+aside li:hover {
+    color: #80ed99;
+}
+
+aside li::after {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #ffffff24, transparent);
+    content: '';
+    bottom: 0px;
+}
+
+aside li i {
+    font-size: 1.3rem;
+}
+.activeLink{
+    color:#80ed99
+}
+.mySwiper {
+
+    flex: 1;
+    height: 100%;
+}
+
+.home-slide {
+    color: white;
+    display: flex;
+    background-color: #343a40;
+}
+
+.HomeContent {
+    margin: auto 0px;
+    flex: 1;
+    height: auto;
+    
+    padding: 100px;
+    user-select: none;
+}
+
+.SideImg {
+    width: 30%;
+
+
+    margin: auto 10px;
+    margin-right: 100px;
+    position: relative;
+}
+
+.SideImg img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.SideImg .top-right-corner,
+.bottom-left-corner {
+    position: absolute;
+}
+
+.bottom-left-corner {
+    left: -50px;
+    bottom: -50px;
+    rotate: -90deg;
+}
+
+.top-right-corner {
+    right: -50px;
+    top: -50px;
+    rotate: 90deg;
+}
+
+.hr1 {
+    width: 150px;
+    height: 10px;
+    border: none;
+    background: #80ed99;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.hr2 {
+    width: 10px;
+    height: 120px;
+    border-bottom-left-radius: 3px;
+
+    background: #80ed99;
+    border: none;
+    border-bottom-right-radius: 3px;
+}
+
+.HomeContent h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.HomeContent h2 {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+
+.HomeContent h1 .stylized-name {
+    font-weight: 700;
+    color: #80ed99;
+}
+
+.proffesions {
+    color: #85f69f;
+}
+
+.HomeContent .heroline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-right:50px;
+}
+
+.buttonGroup {
+    display: flex;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+.buttonGroup button ,.primary{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #1d8637;
+    color: white;
+    border-radius: 5px;
+}
+
+.slide-help {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    z-index: 100;
+    left: 0%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+
+
+.mySwiper {
+    width: 80vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #343a40;
+}
+
+.swiper-slide {
+    width: 100%;
+
+    background-color: #343a40;
+    height: 100%;
+}
+
+.about-us {
+    width:100%;
+    height:100%;
+
+    padding: 100px;
+    color: white;
+}
+
+.heading {
+    padding: 20px 10px;
+    font-size: 2.5rem;
+    color: #80ed99;
+}
+
+.about-us h3 {
+    padding: 10px;
+
+}
+
+.aboutme-deatils {
+    padding: 20px;
+    font-weight: 300;
+}
+
+.about-me-divison {
+    display: flex;
+}
+
+.about-me-table {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.about-me-table li {
+    padding: 20px;
+    position: relative;
+}
+
+.about-me-table li::after {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #ffffff77, transparent);
+    content: '';
+    bottom: 0px;
+}
+
+.about-me-table span {
+    color: #80ed99;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.about-me-table .buttonGroup {
+    grid-column: 1/span 2;
+    justify-content: center;
+    padding: 50px;
+    flex: 1;
+}
+
+.skill-bar {
+    width: calc(40% - 20px);
+}
+
+.skill-bar li {
+    width: 100%;
+    padding: 10px;
+}
+
+.skill-bar p {
+    color: #80ed99;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.skill-bar .bar {
+    width: 100%;
+    height: 15px;
+    background-color: #272c30;
+    border-radius: 20px;
+
+}
+
+#clous{
+
+display: none;
+cursor: pointer;
+font-size: 2rem;
+background: transparent;
+color: red;
+border-radius: 50%;
+width: 3rem;
+height: 3rem;
+margin: auto;
+margin-top: 1rem;
+padding-left: .8rem;
+text-align: center !important;
+border: 2px solid ;
+border-top-color: red;
+border-left-color: blue;
+border-right-color: blue;
+border-bottom-color: red;
+animation: hassan 5s infinite linear;
+
+
+}
+@keyframes hassan {
+  0%{
+    border-top-color: red;
+    border-left-color: blue;
+    border-right-color: blue;
+    border-bottom-color: red;
+  }
+  25%{
+    border-top-color: blue;
+border-left-color: red;
+border-right-color: red;
+border-bottom-color: blue;
+  }
+  50%{
+    border-top-color: red;
+border-left-color: blue;
+border-right-color: blue;
+border-bottom-color: red;
+  }
+  75%{
+    border-top-color: blue;
+border-left-color: red;
+border-right-color: red;
+border-bottom-color: blue;
+  }
+  100%{
+    border-top-color: red;
+border-left-color: blue;
+border-right-color: blue;
+border-bottom-color: red;
+  }
+  
+}
+.active-bar {
+    background-color: #80ed99;
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+}
+
+.services {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, calc(34% - 10px));
+    grid-template-rows: 100px calc(60% - 50px) calc(50% - 50px);
+    padding: 100px ;
+    box-sizing: border-box;
+}
+
+.services .heading {
+    grid-column: 1/span 3;
+}
+.service{
+  width: 15rem;
+  height: 10rem;
+  box-shadow: 0 2px 10px #80ed99;
+  margin-top: 20px !important;
+
+}
+.services .service {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.437);
+    border-radius: 5px;
+    /* margin: 20px; */
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+
+    transition-duration: 0.25s;
+}
+
+.services .service i {
+    font-size: 3rem;
+    color:#80ed99
+}
+
+.services .service-icon {
+    padding: 0px 50px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+.service h2{
+    color:#80ed99;
+    margin-bottom: 1rem;
+    
+}
+.service:hover {
+    background-color: #80ed99;
+    color: #176d2d
+}
+.service:hover h2,.service:hover i{
+    color: #176d2d
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    padding:100px;
+    grid-template-rows: 100px calc(50% - 50px) calc(50% - 50px);
+}
+
+.gallery h1,
+.gallery h2 {
+    grid-column: 1/span 3;
+}
+
+.gallery h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 20px 10px;
+}
+
+.gallery .project {
+    margin: 25px 20px;
+    margin-top: 0px;
+    background: #212529;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.gallery .project img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    border:none;
+}
+
+.contactMe {
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 80px calc(30% - 20px) calc(30% - 20px) calc(25% - 20px) calc(25% - 20px);
+    position: relative;
+    padding:100px;
+    height: 110vh !important;
+}
+
+.contactMe h1 {
+    grid-column: 1/span 3;
+    font-size:2.5rem;
+    padding:30px;
+}
+
+.contactMe form {
+    grid-area: 2/2/ span 5/span 2;
+}
+
+.contactinfo {
+  margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.contactinfo i {
+    padding: 10px;
+    font-size: 2.5rem;
+    color: #80ed99;
+    margin-top: 6rem ;
+}
+
+.contactinfo h3 {
+    color: #80ed99;
+}
+.contactinfo .phone{
+  margin-bottom: 2.5rem;
+}
+
+.contactMe form {
+    display: grid;
+    grid-template-columns: 50% 60%;
+    width: 100%;
+    padding: 20px;
+    height: fit-content;
+    color: white;
+}
+
+.contactMe form h2 {
+    grid-column: 1/span 2;
+    padding: 20px;
+    display: flex;
+}
+
+.contactMe form input {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 1.1rem;
+    border: none;
+    color: white;
+    background-color: #212529;
+
+}
+
+.contactMe form input:focus {
+    border: 1px solid #85f69f;
+    outline: none;
+
+}
+
+.contactMe form textarea {
+    width: calc(100% - 40px);
+
+    grid-column: 1/span 2;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    resize: none;
+    border:none;
+    border: none;
+    color:white;
+    background-color: #212529;
+    margin-bottom: 10rem !important;
+}
+
+.contactMe form textarea:focus {
+    border: 1px solid #85f69f !important;
+}
+.contactMe button{
+    grid-column: 1/span 2;
+    margin:20px auto ;
+
+}
+.text{
+  margin-top: 1%;
+  text-align: center;
+  color: aliceblue;
+
+}
+footer{
+
+    position:absolute;
+    top:85%;
+    left: -35%;
+    text-align: center;
+    color:white;
+    width:100%;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+footer li{
+    padding:10px;
+}
+form h2 .SocialLinks{
+    padding:5px;
+    width:fit-content;
+    margin-left:auto;
+    margin-right:10px;
+    background-color: #212529;
+    border-radius: 30px;
+}
+form h2 .SocialLinks i{
+    padding:10px;
+    border-radius: 50%;
+    transition-duration: 0.25s;
+}
+form h2 .SocialLinks i:hover{
+    background-color: #176d2d;
+}
+.about-us{
+    overflow: auto;
+}
+
+/* media query */
+@media (max-width: 1200px) {
+  #clous{
+    display: flex;
+  }
+  .home-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .HomeContent {
+    width: 100%;
+    text-align: start; /*محاذاة النص في الوسط */
+  }
+
+  .HomeContent h1 {
+    width: 12rem;
+    font-size: 24px; /* تكبير/تصغير حجم العنوان الرئيسي */
+    margin-bottom: 10px;
+  }
+  .HomeContent span{
+    width: 20rem !important;
+  }
+  .HomeContent p{
+    width: 15rem;
+    text-align: center;
+  }
+
+  .HomeContent h2 {
+    width: 12rem;
+    font-size: 20px; /* تكبير/تصغير حجم العنوان الفرعي */
+    margin-bottom: 10px;
+  }
+  .project{
+    width: 15rem;
+    height: 15rem;
+  }
+  .gallery{
+    overflow-y: scroll;
+  }
+
+  .heroline {
+    font-size: 18px; /* تكبير/تصغير حجم الفقرة */
+    margin-bottom: 20px;
+  }
+
+
+  .buttonGroup {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonGroup button {
+    width: 100%;
+    margin-bottom: 10px; /* إضافة مسافة بين الأزرار */
+  }
+
+  .SideImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .SideImg img {
+    display: none;
+    width: 80%; /* تقليل حجم الصورة لتناسب الشاشات الصغيرة */
+    height: auto;
+  }
+
+  .top-right-corner, .bottom-left-corner {
+    display: none; /* إخفاء الخطوط في الزوايا في الشاشات الصغيرة إذا كانت غير ضرورية */
+  }
+
+  .slide-help {
+    font-size: 14px; /* تكبير/تصغير حجم النص المساعد */
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .services {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+
+.swiper-slide{
+ overflow-y: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+  .service-item {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+
+  .service-item img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .service-item-content {
+
+    text-align: center;
+  }
+  .about-us {
+    overflow-x: hidden;
+    padding: 10px;
+    text-align: center; /* محاذاة جميع النصوص في الوسط */
+  }
+
+  .heading {
+    font-size: 24px; /* تصغير حجم العنوان */
+    margin-bottom: 10px;
+  }
+
+  .sub-heading {
+    font-size: 20px; /* تصغير حجم العنوان الفرعي */
+    margin-bottom: 10px;
+  }
+
+  .aboutme-deatils {
+
+    font-size: 15px; /* تقليل حجم النص */
+    line-height: 1.5; /* تحسين تباعد الأسطر */
+    margin-bottom: 20px;
+  }
+
+  .about-me-divison {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    align-items: center;
+  }
+
+  .about-me-table, .skill-bar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-me-table li, .skill-bar li {
+    font-size: 16px; 
+    margin-bottom: 10px; 
+  }
+
+  .bar {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .active-bar {
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .buttonGroup button {
+    width: 100%;
+    margin-bottom: 10px; /* إضافة مسافة بين الأزرار */
+  }
+  .contactinfo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+  }
+
+    .contactinfo i {
+        font-size: 20px;
+    }
+
+    .contactinfo h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .contactinfo p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button.primary {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .SocialLinks i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .heading{
+      margin-bottom: 0;
+    
+    }
+    .contactinfo {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 100px; /* Reduced margin */
+  }
+
+  .contactinfo i {
+    margin-top: 0;
+      font-size: 20px;
+  }
+  .contactinfo .phone{
+    margin-bottom:  0;
+  }
+
+  .contactinfo h3 {
+      margin: 0;
+      font-size: 16px;
+  }
+
+  .contactinfo p {
+      margin: 0;
+      font-size: 14px;
+  }
+
+  form input,
+  form textarea {
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 10px; /* Reduced margin */
+  }
+
+  button.primary {
+      padding: 10px;
+      font-size: 16px;
+  }
+
+  footer {
+    display: none;
+      font-size: 12px;
+  }
+
+  .SocialLinks i {
+      font-size: 18px;
+      margin-right: 10px;
+  }
+  
+}
+/* frist section  */
+
+@media screen and (min-width:320px) and (max-width:450px){
+  .Links{
+    margin-top: 10px;
+  }
+  .HomeContent {
+    width: 100%;
+    margin-right: 170px;
+    margin-top: 60px;
+  }
+  .HomeContent h1{
+    font-size: 22px;
+  }
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .buttonGroup{
+    width: 180px;
+  }
+}
+@media screen and (min-width:375px) and (max-width:450px){
+  .HomeContent {
+    width: 100%;
+    margin-right: 120px;
+  }
+  .HomeContent h1{
+    font-size: 27px;
+  }
+  .HomeContent h2{
+    font-size: 21px;
+  }
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .buttonGroup{
+    width: 220px;
+  }
+  .buttonGroup a{
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width:450px) and (max-width:576px){
+  .HomeContent{
+    width: 100%;
+    margin-right: 110px;
+  }
+  .HomeContent h1{
+    width: 270px;
+    height: 100px;
+    font-size: 38px;
+    margin-right: 450px;
+    margin-bottom: 13px;
+  }
+  .HomeContent h2{
+    font-size: 28px;
+    width: 300px;
+  }
+  .buttonGroup {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .buttonGroup a{
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:650px){
+  .HomeContent{
+    width: 100%;
+    margin-right: 80px;
+  }
+  .HomeContent h1{
+    width: 350px;
+    height: 90px;
+    font-size: 43px;
+    margin-right: 450px;
+    margin-bottom: 35px;
+  }
+  .HomeContent h2{
+    font-size: 33px;
+    width: 300px;
+  }
+  .buttonGroup {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .buttonGroup a{
+    font-size: 28px;
+  }
+
+}
+@media screen and (min-width:650px) and (max-width:768px){
+  .HomeContent{
+    width: 100%;
+    margin-right: 10px;
+  }
+  .HomeContent h1{
+    width: 350px;
+    height: 90px;
+    font-size: 43px;
+    margin-right: 450px;
+    margin-bottom: 35px;
+  }
+  .HomeContent h2{
+    font-size: 33px;
+    width: 300px;
+  }
+  .buttonGroup {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .heroline{
+    margin-left: 50px;
+  }
+  .buttonGroup a{
+    font-size: 28px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+  .HomeContent{
+    width: 100%;
+    margin-right: 10px;
+  }
+  .HomeContent h1{
+    width: 350px;
+    height: 90px;
+    font-size: 43px;
+    margin-right: 450px;
+    margin-bottom: 35px;
+  }
+  .HomeContent h2{
+    font-size: 33px;
+    width: 300px;
+  }
+  .buttonGroup {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+  }
+  .heroline{
+    margin-left: 50px;
+  }
+  .buttonGroup a{
+    font-size: 28px;
+  }
+}
+@media screen and (min-width:992px) and (max-width:1024px){
+  .HomeContent{
+    width: 100%;
+    margin-right: 60px;
+  }
+  .HomeContent h1{
+    width: 230px;
+    height: 90px;
+    font-size: 27px;
+    margin-right: 450px;
+    margin-bottom: 2px;
+  }
+  .HomeContent h2{
+    font-size: 20px;
+    width: 300px;
+  }
+  .buttonGroup {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .heroline{
+    margin-left: 1px;
+  }
+  .buttonGroup a{
+    font-size: 18px;
+  }
+  .SideImg img{
+    display: flex;
+    width: 270px;
+    height: 270px;
+    margin-left: 490px;
+    margin-top: -800px;
+    float: right;
+  }
+  .top-right-corner, .bottom-left-corner{
+    display: flex;
+  }
+  .hr1{
+    width: 100px;
+    display: flex;
+  }
+}
